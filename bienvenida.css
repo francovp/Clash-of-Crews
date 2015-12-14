@@ -1,0 +1,37 @@
+	body{
+		background-image:url(fondo1080.jpg)
+	}
+
+	.title {
+		background-color: #B45F04;
+		color: white;
+		text-align:50;
+		border-radius: 6px;
+		color: white;
+	}
+
+	.modal-content {
+		background-color: rgba(153,76,0,100.0);
+		font-size: 16px;
+		text-align: left;
+	}
+
+	.modal-title {
+		font-size: 22px;
+		font-weight: bold;
+	}
+
+	.datos{
+		color: #fff;
+  		font-size: 12px;
+  		font-family: 'Shift', sans-serif;
+  		font-weight: bold;
+	}
+
+	.textbox {
+		color: black;
+	}
+
+	.form-control {
+		width: 75%
+	}

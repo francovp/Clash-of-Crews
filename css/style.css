@@ -1,0 +1,58 @@
+﻿	body{
+		background-image:url(fondo1080.jpg)
+	}
+
+	.title {
+		background-color: #B45F04;
+		color: white;
+		text-align:50;
+		border-radius: 6px;
+		color: white;
+	}
+
+	.cuadro {
+		background-color: rgba(255,128,0,0.50);
+		border-radius: 10px;
+		display:inline-table;
+		width:100%;
+		margin-bottom:0%;
+		margin-top:0%;
+	}
+
+	.cuadro2 {
+		background-color: rgba(255,128,0,0.50);
+		border-radius: 10px;
+		width:100%;
+		margin-bottom:0%;
+		margin-top:0%;
+	}
+
+	.textbox {
+		color: black;
+	}
+
+	.form-control {
+		width: 75%
+	}
+
+	.modal-content {
+		background-color: rgba(153,76,0,100.0);
+		font-size: 16px;
+		text-align: left;
+	}
+
+	.modal-title {
+		font-size: 22px;
+		font-weight: bold;
+	}
+
+	.datos{
+		color: #fff;
+  		font-size: 12px;
+  		font-family: 'Shift', sans-serif;
+  		font-weight: bold;
+	}
+
+	.textbox {
+		color: black;
+	}

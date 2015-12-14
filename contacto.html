@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title> Clash of Crews - Contacto</title>
+    <meta name="description" content="">
+    <meta name="Franco Valerio, Diego Mayorga, Leandro Mondaca" content="">
+    <link rel="icon" href="../../favicon.ico">
+	
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Custom styles-->
+    <link href="css/cover.css" rel="stylesheet">
+	<link href="css/style.css"  rel="stylesheet" type="text/css" /> 
+</head>
+
+<body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+			<div class="masthead clearfix">
+				<div class="inner">
+				  <h1 class="masthead-brand">Clash of Crews</h1>
+				  <nav>
+				    <ul class="nav masthead-nav">
+				      <li><a href="index.php">Inicio</a></li>
+				      <li class="active"><a href="contacto.html">Contacto</a></li>
+				    </ul>
+				  </nav>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="cuadro">
+								<center>
+									<strong><h3>Franco Valerio</h3></strong><br>
+									<img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10929914_10205905938352674_7176607782505380049_n.jpg?oh=a8d36a7cc896f26e1d5d62e5fa0bb1c3&oe=55F7D044" class="img-thumbnail" alt="franco" width="250" height="250">
+							        <br><br>
+							        <a href="mailto:franco.gvp@hotmail.com" target="_top" class="btn btn-default" role="button">Contactar</a><br><br>
+							    </center>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="cuadro">
+							<center>
+								<strong><h3>Diego Mayorga</h3></strong><br>
+								<img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/17704_679343962177845_6222964856281126765_n.jpg?oh=6bf045aeee72edcdcd3680e6c0167625&oe=5625761D" class="img-thumbnail" alt="franco" width="250" height="250">
+							    <br><br>
+								<a href="mailto:diego.ignacio.mayorga@gmail.com" target="_top" class="btn btn-default" role="button">Contactar</a><br><br>
+							</center>
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="cuadro">
+							<center>
+								<strong><h3 class="form-signin-heading">Leandro Mondaca</h3></strong><br>
+						        <img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/1798372_10201668676814109_2134715539_n.jpg?oh=cd0fc5120dcbf58c9470a89ef753ce2b&oe=55F6CC0B" class="img-thumbnail" alt="franco" width="250" height="250">
+							    <br><br>
+						        <a href="#" target="_top" class="btn btn-default" role="button">Contactar</a><br><br>
+						    </center>
+						</div>
+					</div>
+				</div>
+				<br><br><br>
+			</div>
+
+<?php
+
+	//Se verifica Si está iniciada la sesión
+	if (isset($_SESSION)){
+		$session = $_SESSION["session"];
+		// Si "Recuerdame" está activado se redirije al Perfil
+		if($session)
+		{
+			header ("Location: perfil.php");
+		}
+	}
+	// Si "Recuerdame" no está activado, se destruirá la sesión.
+	else{
+		// Destruir todas las variables de sesión.
+		$_SESSION = array();
+		// Borrar la cookie de sesión.
+		if (ini_get("session.use_cookies")) {
+		    $params = session_get_cookie_params();
+		    setcookie(session_name(), '', time() - 42000,
+		        $params["path"], $params["domain"],
+		        $params["secure"], $params["httponly"]
+		    );
+		}
+		if (strlen(session_id())){
+		// Finalmente, destruir la sesión.
+			session_destroy();
+		}
+	}
+?>
+
+<!-- Fondo de la página -->
+            <div class="mastfoot">
+              <div class="inner">
+                <p>Sitio desarrollado por:<br>Franco Valerio - Leandro Mondaca - Diego Mayorga</p>
+              </div>
+            </div>
+          </div>
+    	  </div>
+   	  </div>
+  	</div>
+
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
